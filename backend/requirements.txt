@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+pillow
+pillow-heif
+opencv-python
+numpy
+reportlab
+openai
+google-generativeai

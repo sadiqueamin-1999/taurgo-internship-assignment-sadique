@@ -1,0 +1,156 @@
+TaurgoVision — Full Requirement Checklist
+
+1. Core Functional Requirements
+✔ Image Upload
+
+Users can upload JPG, PNG, and HEIC images through the Next.js frontend.
+HEIC support enabled with pillow-heif.
+
+✔ Vision Model Analysis
+
+The backend performs automated visual inspection using a hybrid pipeline:
+
+Offline Computer Vision (default)
+Online Gemini Vision (optional)
+Online OpenAI Vision (optional)
+
+System auto-detects available modes.
+
+✔ Extract Visible Defects
+
+Offline CV detects:
+
+Cracks
+Damp/moisture patches
+Surface anomalies
+
+
+Online AI models (if keys exist) provide semantic defect reasoning.
+
+✔ Generate Structured Report
+The backend returns JSON containing:
+
+defects[]
+summary
+recommendations
+original image (base64)
+overlay image (base64)
+
+✔ Display Report in UI
+Frontend displays:
+
+Summary section
+Defects table
+Severity badges
+Confidence percentage
+Notes
+Recommendations
+
+2. Advanced Visual Output Requirements
+✔ Original + Overlay Side-by-Side
+
+High‑contrast overlays show detected cracks and damp areas.
+Red crack lines + black glow.
+Cyan damp boxes + white glow.
+
+✔ Professional Report UI
+
+Dark outer background.
+Clean white card (light theme inside).
+Easy to read.
+Table layout for defects.
+
+✔ PDF Export
+
+RICS-inspired structure:
+
+Executive Summary
+Defects table
+Recommendations
+
+
+Download button available on UI.
+Generated via FastAPI /pdf route.
+
+3. Backend Architecture Requirements
+✔ FastAPI Backend
+
+Fully modular backend:
+
+app.py
+cv_engine.py
+ai_engine.py
+models.py
+report_generator.py
+utils.py
+
+
+
+✔ Offline Mode (No API keys needed)
+
+System runs with zero configuration.
+Runs entirely offline with CV-only mode.
+
+✔ Optional Online Mode
+If .env contains:
+GEMINI_API_KEY=
+OPENAI_API_KEY=
+
+Then:
+
+Gemini Vision used first
+OpenAI Vision used next
+Offline CV fallback
+
+🟩 4. Frontend Architecture Requirements
+✔ Next.js Frontend
+
+Clean modern UI.
+Global dark mode.
+Light report container.
+File upload box.
+Analysis button.
+PDF download button.
+
+✔ Readable, Polished Report
+
+5. Bonus Features (Above and Beyond)
+✔ HEIC Support
+This system handles iPhone photos.
+✔ Hybrid AI + CV
+If LLM fails or keys not provided - CV automatically kicks in.
+✔ Error-Tolerant
+No hard dependency on API or Internet.
+✔ High-Visibility Overlays
+Glow effects
+Strong colour contrast
+Professional-grade highlighting
+✔ RICS-Style Export
+PDF is structured similarly to real surveyor reports.
+✔ Professional Theming
+Dark UI gives a polished product feel.
+
+🟩 6. Running Instructions (Simplified)
+✔ Backend
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python -m uvicorn app:app --reload
+
+✔ Frontend
+cd frontend
+npm install
+npm run dev
+
+Open the app:
+👉 http://localhost:3000
+Optional:
+Add API keys to .env for advanced AI.
+
+🟩 7. Final Verdict
+✔ ALL required features implemented
+✔ ALL optional recommended features implemented
+✔ MULTIPLE bonus features beyond the brief
+✔ Clean, professional UI + PDF export
+✔ Real-world inspection workflows respected

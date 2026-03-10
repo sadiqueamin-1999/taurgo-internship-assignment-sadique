@@ -1,0 +1,124 @@
+Why TaurgoVision Stands Out
+
+TaurgoVision excels because it is not just an “AI demo” — it is a complete inspection system designed for real‑world use.
+
+Here’s what makes it better than typical hackathon entries:
+
+---
+
+# 1. Dual‑Mode Intelligence (Online + Offline)
+Most entries rely **only on cloud AI**.
+If the evaluator:
+- has no API key  
+- has no internet  
+- or the API rate‑limits them  
+
+-> Their project breaks.
+
+TaurgoVision never breaks:
+
+- If Gemini is available - uses Gemini Vision  
+- Else if OpenAI is available - uses GPT‑4 Vision  
+- Else - uses offline CV with overlays  
+
+This flexible architecture is extremely robust and works in all environments.
+
+---
+
+# 2. Full HEIC Support (iPhone Photos)
+Most inspection systems fail on `.HEIC` files.
+
+TaurgoVision handles:
+- iPhone photos  
+- iPad photos  
+- Modern HEIF images  
+
+This is a direct usability advantage.
+
+---
+
+# 3. Professional, Clear Visual Overlays
+While other teams use plain bounding boxes, TaurgoVision uses:
+
+- Red crack lines with black halo  
+- Cyan damp boxes with white halo  
+- Enhanced visibility on ANY surface  
+- Photo‑realistic visual evidence  
+
+This is what real surveyors expect.
+
+---
+
+# 4. Polished Inspection Report UI
+Not raw JSON.
+Not plain text.
+
+TaurgoVision shows:
+- Summary  
+- Defect table  
+- Severity badges  
+- Confidence  
+- Recommendations  
+- Side‑by‑side before/after images  
+
+This looks like a professional property inspection tool — not a hack.
+
+---
+
+# 5. RICS‑Style PDF Export
+The PDF contains:
+- Executive summary  
+- Detected defects  
+- Severity & confidence  
+- Recommendations  
+- Clean sectional formatting  
+
+It feels production-ready.
+
+---
+
+# 6. Modern UI
+- Dark background  
+- Light report card  
+- Clean typography  
+- Soft shadows  
+- Responsive layout  
+
+Looks like a real SaaS product.
+
+---
+
+# 7. Real Software Architecture
+This is NOT a single-file “script”.
+
+It includes:
+- FastAPI backend  
+- Next.js frontend  
+- Modular CV engine  
+- AI integration  
+- PDF generation module  
+- Clear folder structure  
+
+This shows the production setups clearly.
+
+---
+
+# 8. Designed With Evaluators In Mind
+- No API key required  
+- No internet required  
+- Clear instructions  
+- Runs in two terminals  
+- Works on Windows  
+- Zero configuration  
+
+Simple to run.
+
+---
+
+# 9. Final Word
+TaurgoVision presents:
+- Strong engineering  
+- Real practical design  
+- A complete user flow  
+- Reliability under all conditions  
+- Professional visuals and PDF reports  
